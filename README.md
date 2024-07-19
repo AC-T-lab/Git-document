@@ -34,9 +34,14 @@ brew install git
 ```
 
 **Linux:**
-\`\`\`bash
+```bash
 sudo apt-get install git
-\`\`\`
+```
+
+### Check git version
+```bash
+git --version
+```
 
 ### Configuring Git
 After installation, open your command line tool and set your username and email address:
@@ -54,11 +59,12 @@ Create a new Git repository locally:
 ```bash
 mkdir myproject
 cd myproject
+
 git init
 ```
 
 ### Cloning a Repository
-Clone an existing repository from a remote server:
+Clone an existing repository from a remote server, you can find the repository URL on github (in the green button "Code" in the page of the repository):
 
 ```bash
 git clone https://github.com/username/repository.git
@@ -68,7 +74,7 @@ git clone https://github.com/username/repository.git
 **Add files to the staging area:**
 
 ```bash
-git add filename
+git add filename1 filename2
 ```
 
 **Commit changes:**
@@ -91,7 +97,7 @@ git log
 
 ## GitHub Operations
 
-### Creating a GitHub Repository
+### Creating a new GitHub Repository
 1. Log in to your GitHub account
 2. Click the “+” icon in the top right corner and select “New repository”
 3. Fill in the repository name and description, then click “Create repository”
@@ -99,10 +105,18 @@ git log
 ### Pushing to GitHub
 Push changes from your local repository to GitHub:
 
+first time pushing
 ```bash
 git remote add origin https://github.com/username/repository.git
 git branch -M main
 git push -u origin main
+```
+
+PS:remember to add and commit the file first, you can check it with "git status"
+
+not the first time 
+```bash
+git push
 ```
 
 ### Creating a Pull Request
