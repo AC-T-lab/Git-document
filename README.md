@@ -29,9 +29,9 @@ Please install Git according to your operating system.
 2. Follow the installation prompts to complete the installation
 
 **MacOS:**
-\`\`\`bash
+```bash
 brew install git
-\`\`\`
+```
 
 **Linux:**
 \`\`\`bash
@@ -41,53 +41,53 @@ sudo apt-get install git
 ### Configuring Git
 After installation, open your command line tool and set your username and email address:
 
-\`\`\`bash
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
-\`\`\`
+```
 
 ## Basic Commands
 
 ### Creating a New Repository
 Create a new Git repository locally:
 
-\`\`\`bash
+```bash
 mkdir myproject
 cd myproject
 git init
-\`\`\`
+```
 
 ### Cloning a Repository
 Clone an existing repository from a remote server:
 
-\`\`\`bash
+```bash
 git clone https://github.com/username/repository.git
-\`\`\`
+```
 
 ### Basic Operations
 **Add files to the staging area:**
 
-\`\`\`bash
+```bash
 git add filename
-\`\`\`
+```
 
 **Commit changes:**
 
-\`\`\`bash
+```bash
 git commit -m "commit message"
-\`\`\`
+```
 
 **Check status:**
 
-\`\`\`bash
+```bash
 git status
-\`\`\`
+```
 
 **View history:**
 
-\`\`\`bash
+```bash
 git log
-\`\`\`
+```
 
 ## GitHub Operations
 
@@ -99,11 +99,11 @@ git log
 ### Pushing to GitHub
 Push changes from your local repository to GitHub:
 
-\`\`\`bash
+```bash
 git remote add origin https://github.com/username/repository.git
 git branch -M main
 git push -u origin main
-\`\`\`
+```
 
 ### Creating a Pull Request
 1. After cloning and modifying someone else’s repository on GitHub, commit your changes and push to your branch
@@ -114,18 +114,18 @@ git push -u origin main
 ### How to merge branches?
 Switch to the target branch and execute the merge command:
 
-\`\`\`bash
+```bash
 git checkout main
 git merge feature-branch
-\`\`\`
+```
 
 ### How to resolve merge conflicts?
 When a merge conflict occurs, Git will prompt the conflicting files. Manually edit these files to resolve conflicts, then add and commit the changes:
 
-\`\`\`bash
+```bash
 git add conflicted-file
 git commit -m "resolved merge conflict"
-\`\`\`
+```
 
 For any questions, please refer to the [Git official documentation](https://git-scm.com/doc) or [GitHub Help Center](https://help.github.com).
 
