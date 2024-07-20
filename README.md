@@ -102,17 +102,30 @@ git log
 2. Click the “+” icon in the top right corner and select “New repository”
 3. Fill in the repository name and description, then click “Create repository”
 
+### Get the token
+Go to settings -> developer settings, generate new personal access token
+```bash
+git remote set-url origin https://<tokens>@github.com/<username>/<repository name>.git
+```
+please keep your token in note
+
 ### Pushing to GitHub
 Push changes from your local repository to GitHub:
 
-first time pushing
+== first time pushing ==
+
+### Get the token
+Go to settings -> developer settings, generate new personal access token
 ```bash
-git remote add origin https://github.com/username/repository.git
+git remote set-url origin https://<tokens>@github.com/<username>/<repository name>.git
+```
+please keep your token in note, then setup the branch name
+```bash
 git branch -M main
 git push -u origin main
 ```
 
-PS:remember to add and commit the file first, you can check it with "git status"
+== remember to add and commit the file first, you can check it with "git status" ==
 
 not the first time 
 ```bash
