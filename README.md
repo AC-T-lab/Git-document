@@ -69,6 +69,7 @@ Clone an existing repository from a remote server, you can find the repository U
 ```bash
 git clone https://github.com/username/repository.git
 ```
+you don't need to init iif you clone repo
 
 ### Basic Operations
 **Add files to the staging area:**
@@ -125,9 +126,9 @@ git branch -M main
 git push -u origin main
 ```
 
-== remember to add and commit the file first, you can check it with "git status" ==
+==remember to add and commit the file first, you can check it with "git status"==
 
-not the first time 
+use push to upload the file onto Github
 ```bash
 git push
 ```
