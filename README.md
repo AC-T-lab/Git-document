@@ -10,6 +10,7 @@
    - [Creating a New Repository](#creating-a-new-repository)
    - [Cloning a Repository](#cloning-a-repository)
    - [Basic Operations](#basic-operations)
+   - [Checkout the old version file](#checkout-the-old-version-file)
 4. [GitHub Operations](#github-operations)
    - [Creating a GitHub Repository](#creating-a-github-repository)
    - [Pushing to GitHub](#pushing-to-github)
@@ -67,9 +68,9 @@ git init
 Clone an existing repository from a remote server, you can find the repository URL on github (in the green button "Code" in the page of the repository):
 
 ```bash
-git clone https://github.com/username/repository.git
+git clone https://github.com/<username>/<repository name>.git
 ```
-you don't need to init iif you clone repo
+you don't need to init if you clone repo from Github
 
 ### Basic Operations
 **Add files to the staging area:**
@@ -77,11 +78,19 @@ you don't need to init iif you clone repo
 ```bash
 git add filename1 filename2
 ```
+or using "." for all the file in the path
 
 **Commit changes:**
 
 ```bash
 git commit -m "commit message"
+```
+after committing, you already done, don't forget to pushing to github
+
+**Changing the latest commit**
+keep the commit history
+```bash
+git revert <commit-hash>
 ```
 
 **Check status:**
@@ -89,11 +98,35 @@ git commit -m "commit message"
 ```bash
 git status
 ```
+tell you all the file in path is tracked or untracked, staged or unstaged
 
 **View history:**
 
 ```bash
 git log
+```
+add "--filename" beehind for specific file history
+add "--online" behind for simple history
+
+### Checkout the old version file
+**View the old version file**
+if you just want to see the old version file, without changing the current version
+
+
+```bash
+git checkout <commit-hash>
+```
+
+**Work with old version on new branch**
+
+```bash
+git checkout -b <new-branch-name> <commit-hash>
+```
+
+**Cover the current version**
+
+```bash
+git restore --source=<commit-hash> --staged --worktree .
 ```
 
 ## GitHub Operations
@@ -103,32 +136,11 @@ git log
 2. Click the “+” icon in the top right corner and select “New repository”
 3. Fill in the repository name and description, then click “Create repository”
 
-### Get the token
-Go to settings -> developer settings, generate new personal access token
-```bash
-git remote set-url origin https://<tokens>@github.com/<username>/<repository name>.git
-```
-please keep your token in note
-
 ### Pushing to GitHub
 Push changes from your local repository to GitHub:
 
-== first time pushing ==
-
-### Get the token
-Go to settings -> developer settings, generate new personal access token
-```bash
-git remote set-url origin https://<tokens>@github.com/<username>/<repository name>.git
-```
-please keep your token in note, then setup the branch name
-```bash
-git branch -M main
-git push -u origin main
-```
-
 ==remember to add and commit the file first, you can check it with "git status"==
-
-use push to upload the file onto Github
+use push to upload the file onto Github, with no branch changes
 ```bash
 git push
 ```
