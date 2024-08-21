@@ -14,6 +14,7 @@
 4. [GitHub Operations](#github-operations)
    - [Creating a GitHub Repository](#creating-a-github-repository)
    - [Pushing to GitHub](#pushing-to-github)
+   - [Pulling to GitHub](#pulling-to-github)
    - [Creating a Pull Request](#creating-a-pull-request)
 5. [FAQ](#faq)
 
@@ -70,7 +71,7 @@ Clone an existing repository from a remote server, you can find the repository U
 ```bash
 git clone https://github.com/<username>/<repository name>.git
 ```
-you don't need to init if you clone repo from Github
+*you don't need to init if you clone repo from Github!*
 
 ### Basic Operations
 **Add files to the staging area:**
@@ -85,7 +86,7 @@ or using "." for all the file in the path
 ```bash
 git commit -m "commit message"
 ```
-after committing, you already done, don't forget to pushing to github
+*after committing, you already done, don't forget to pushing to github*
 
 **Changing the latest commit**
 keep the commit history
@@ -143,6 +144,14 @@ Push changes from your local repository to GitHub:
 use push to upload the file onto Github, with no branch changes
 ```bash
 git push
+```
+
+### Pulling to GitHub
+If your file has change by others or push from other devices:
+check if you has any change now, if no 
+
+```bash
+git pull origin <branch name>
 ```
 
 ### Creating a Pull Request
